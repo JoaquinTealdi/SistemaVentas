@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SaleSystem/.vs/SaleSystem
+/SaleSystem/SS.Model/obj/Debug
+/SaleSystem/SS.Repositories/obj/Debug
+/SaleSystem/SS.Services/obj/Debug
+/SaleSystem/SS.ViewLayer/obj/Debug
