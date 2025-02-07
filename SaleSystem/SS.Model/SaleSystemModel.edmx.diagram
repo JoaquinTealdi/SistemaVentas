@@ -4,29 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b99ed772a4c2406182898637e8b53ee4" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="Models.Clients" Width="1.5" PointX="7.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Permissions" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.ProductCategories" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Products" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.PurchaseDetails" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Purchases" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Roles" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.SaleDetails" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Sales" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Suppliers" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.sysdiagrams" Width="1.5" PointX="9.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Users" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <AssociationConnector Association="Models.FK__Permissio__RoleI__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__Products__Produc__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__PurchaseD__Produ__6E01572D" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__SaleDetai__Produ__787EE5A0" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__PurchaseD__Purch__70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__Purchases__Suppl__6A30C649" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__Purchases__UserI__693CA210" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__Users__RoleId__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__SaleDetai__SaleI__7A672E12" ManuallyRouted="false" />
-        <AssociationConnector Association="Models.FK__Sales__UserId__74AE54BC" ManuallyRouted="false" />
+      <Diagram DiagramId="9dda552af49f4b6d87a32029edf46690" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="SSModel.Client" Width="1.5" PointX="7.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Permission" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.ProductCategory" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Product" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.PurchaseDetail" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Purchase" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Role" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.SaleDetail" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Sale" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.Supplier" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSModel.User" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="SSModel.FK__Permissio__RoleI__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__Products__Produc__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__PurchaseD__Produ__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__SaleDetai__Produ__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__PurchaseD__Purch__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__Purchases__Suppl__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__Purchases__UserI__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__Users__RoleId__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__SaleDetai__SaleI__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="SSModel.FK__Sales__UserId__74AE54BC" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

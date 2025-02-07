@@ -12,15 +12,12 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class SaleDetails
+    public partial class Permission
     {
         public int Id { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
-        public Nullable<decimal> SaleAmount { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> SubAmount { get; set; }
+        public string MenuName { get; set; }
     
-        public virtual Products Products { get; set; }
-        public virtual Sales Sales { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

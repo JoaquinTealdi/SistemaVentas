@@ -12,16 +12,23 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class PurchaseDetails
+    public partial class Purchase
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Purchase()
+        {
+            this.PurchaseDetails = new HashSet<PurchaseDetail>();
+        }
+    
         public int Id { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
-        public Nullable<decimal> PurchaseAmount { get; set; }
-        public Nullable<decimal> SaleAmount { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        public string DocumentType { get; set; }
+        public string DocumentNumber { get; set; }
         public Nullable<decimal> TotalAmount { get; set; }
     
-        public virtual Products Products { get; set; }
-        public virtual Purchases Purchases { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseDetail> PurchaseDetails { get; set; }
+        public virtual Supplier Supplier { get; set; }
+        public virtual User User { get; set; }
     }
 }

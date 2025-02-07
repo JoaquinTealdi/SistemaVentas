@@ -12,12 +12,14 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Permissions
+    public partial class Client
     {
         public int Id { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
-        public string MenuName { get; set; }
-    
-        public virtual Roles Roles { get; set; }
+        public string Dni { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

@@ -12,20 +12,22 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductCategories
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ProductCategories()
+        public Role()
         {
-            this.Products = new HashSet<Products>();
+            this.Permissions = new HashSet<Permission>();
+            this.Users = new HashSet<User>();
         }
     
         public int Id { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
         public string Description { get; set; }
-        public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Products> Products { get; set; }
+        public virtual ICollection<Permission> Permissions { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

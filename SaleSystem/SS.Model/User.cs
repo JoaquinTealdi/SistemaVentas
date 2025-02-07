@@ -12,26 +12,27 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Sales
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sales()
+        public User()
         {
-            this.SaleDetails = new HashSet<SaleDetails>();
+            this.Purchases = new HashSet<Purchase>();
+            this.Sales = new HashSet<Sale>();
         }
     
         public int Id { get; set; }
         public Nullable<System.DateTime> CreationDate { get; set; }
-        public string DocumentType { get; set; }
-        public string DocumentNumber { get; set; }
-        public string ClientDocument { get; set; }
-        public string ClientName { get; set; }
-        public Nullable<decimal> PayAmount { get; set; }
-        public Nullable<decimal> ChangeAmount { get; set; }
-        public Nullable<decimal> TotalAmount { get; set; }
+        public string Dni { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SaleDetails> SaleDetails { get; set; }
-        public virtual Users Users { get; set; }
+        public virtual ICollection<Purchase> Purchases { get; set; }
+        public virtual Role Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Sale> Sales { get; set; }
     }
 }

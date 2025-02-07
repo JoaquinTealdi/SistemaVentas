@@ -12,12 +12,16 @@ namespace SS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class PurchaseDetail
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int Id { get; set; }
+        public Nullable<System.DateTime> CreationDate { get; set; }
+        public Nullable<decimal> PurchaseAmount { get; set; }
+        public Nullable<decimal> SaleAmount { get; set; }
+        public Nullable<int> Quantity { get; set; }
+        public Nullable<decimal> TotalAmount { get; set; }
+    
+        public virtual Product Product { get; set; }
+        public virtual Purchase Purchase { get; set; }
     }
 }

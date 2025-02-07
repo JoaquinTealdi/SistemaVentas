@@ -16,7 +16,7 @@ namespace SS.Model
     public partial class SSModelContainer : DbContext
     {
         public SSModelContainer()
-            : base("name=ModelContainer")
+            : base("name=SSModelContainer")
         {
         }
     
@@ -25,17 +25,16 @@ namespace SS.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Clients> Clients { get; set; }
-        public virtual DbSet<Permissions> Permissions { get; set; }
-        public virtual DbSet<ProductCategories> ProductCategories { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<PurchaseDetails> PurchaseDetails { get; set; }
-        public virtual DbSet<Purchases> Purchases { get; set; }
-        public virtual DbSet<Roles> Roles { get; set; }
-        public virtual DbSet<SaleDetails> SaleDetails { get; set; }
-        public virtual DbSet<Sales> Sales { get; set; }
-        public virtual DbSet<Suppliers> Suppliers { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Permission> Permissions { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<PurchaseDetail> PurchaseDetails { get; set; }
+        public virtual DbSet<Purchase> Purchases { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<SaleDetail> SaleDetails { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
