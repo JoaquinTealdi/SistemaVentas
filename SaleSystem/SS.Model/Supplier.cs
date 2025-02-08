@@ -26,7 +26,7 @@ namespace SS.Model
         public string CompanyName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public bool Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Purchase> Purchases { get; set; }

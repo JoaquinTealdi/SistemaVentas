@@ -20,6 +20,6 @@ namespace SS.Model
         public string FullName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public bool Status { get; set; }
     }
 }

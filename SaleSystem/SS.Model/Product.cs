@@ -29,7 +29,7 @@ namespace SS.Model
         public int Stock { get; set; }
         public Nullable<decimal> PurchaseAmount { get; set; }
         public Nullable<decimal> SaleAmount { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public bool Status { get; set; }
     
         public virtual ProductCategory ProductCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

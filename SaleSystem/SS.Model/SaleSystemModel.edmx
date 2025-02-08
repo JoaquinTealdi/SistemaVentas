@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clients">
           <Key>
             <PropertyRef Name="Id" />
@@ -15,7 +15,7 @@
           <Property Name="FullName" Type="varchar" MaxLength="100" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Permissions">
           <Key>
@@ -33,7 +33,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CreationDate" Type="datetime" />
           <Property Name="Description" Type="varchar" MaxLength="100" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -47,7 +47,7 @@
           <Property Name="Stock" Type="int" Nullable="false" />
           <Property Name="PurchaseAmount" Type="decimal" Precision="10" Scale="2" />
           <Property Name="SaleAmount" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="bit" Nullable="false" />
           <Property Name="ProductCategoryId" Type="int" />
         </EntityType>
         <EntityType Name="PurchaseDetails">
@@ -120,7 +120,7 @@
           <Property Name="CompanyName" Type="varchar" MaxLength="100" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -132,7 +132,7 @@
           <Property Name="FullName" Type="varchar" MaxLength="100" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="bit" Nullable="false" />
           <Property Name="RoleId" Type="int" />
         </EntityType>
         <Association Name="FK__Permissio__RoleI__4D94879B">
@@ -308,8 +308,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -323,7 +322,7 @@
           <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Permission">
           <Key>
@@ -341,7 +340,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CreationDate" Type="DateTime" Precision="3" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK__Products__Produc__656C112C" FromRole="ProductCategories" ToRole="Products" />
         </EntityType>
         <EntityType Name="Product">
@@ -356,7 +355,7 @@
           <Property Name="Stock" Type="Int32" Nullable="false" />
           <Property Name="PurchaseAmount" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="SaleAmount" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Status" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ProductCategory" Relationship="Self.FK__Products__Produc__656C112C" FromRole="Products" ToRole="ProductCategories" />
           <NavigationProperty Name="PurchaseDetails" Relationship="Self.FK__PurchaseD__Produ__6E01572D" FromRole="Products" ToRole="PurchaseDetails" />
           <NavigationProperty Name="SaleDetails" Relationship="Self.FK__SaleDetai__Produ__787EE5A0" FromRole="Products" ToRole="SaleDetails" />
@@ -435,7 +434,7 @@
           <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Purchases" Relationship="Self.FK__Purchases__Suppl__6A30C649" FromRole="Suppliers" ToRole="Purchases" />
         </EntityType>
         <EntityType Name="User">
@@ -448,7 +447,7 @@
           <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Purchases" Relationship="Self.FK__Purchases__UserI__693CA210" FromRole="Users" ToRole="Purchases" />
           <NavigationProperty Name="Role" Relationship="Self.FK__Users__RoleId__59FA5E80" FromRole="Users" ToRole="Roles" />
           <NavigationProperty Name="Sales" Relationship="Self.FK__Sales__UserId__74AE54BC" FromRole="Users" ToRole="Sales" />
