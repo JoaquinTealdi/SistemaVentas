@@ -1,8 +1,12 @@
-﻿using System;
+﻿using SS.Services.Interfaces;
+using SS.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SS.Repositories;
+using SS.Repositories.Interfaces;
 
 namespace SS.ViewLayer
 {
@@ -16,7 +20,12 @@ namespace SS.ViewLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+
+            // Configuración manual de dependencias
+            IUsersRepository usersRepository = new UsersRepository();
+            IUsersService usersService = new UsersService(usersRepository);
+
+            Application.Run(new Login(usersService));
         }
     }
 }
