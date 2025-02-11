@@ -40,6 +40,8 @@
             this.titleMenu = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.loguedUser = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             this.menuAcercaDe});
             this.menuStrip1.Location = new System.Drawing.Point(0, 59);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(829, 73);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 73);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,7 +174,7 @@
             this.titleMenu.Location = new System.Drawing.Point(0, 0);
             this.titleMenu.Name = "titleMenu";
             this.titleMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.titleMenu.Size = new System.Drawing.Size(829, 59);
+            this.titleMenu.Size = new System.Drawing.Size(984, 59);
             this.titleMenu.TabIndex = 1;
             this.titleMenu.Text = "menuStrip2";
             this.titleMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
@@ -195,15 +197,43 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 132);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(829, 318);
+            this.contenedor.Size = new System.Drawing.Size(984, 318);
             this.contenedor.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(760, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Hola de nuevo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // loguedUser
+            // 
+            this.loguedUser.AutoSize = true;
+            this.loguedUser.BackColor = System.Drawing.Color.SteelBlue;
+            this.loguedUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loguedUser.ForeColor = System.Drawing.Color.White;
+            this.loguedUser.Location = new System.Drawing.Point(843, 18);
+            this.loguedUser.Name = "loguedUser";
+            this.loguedUser.Size = new System.Drawing.Size(56, 15);
+            this.loguedUser.TabIndex = 5;
+            this.loguedUser.Text = "Usuario: ";
+            this.loguedUser.Click += new System.EventHandler(this.loguedUser_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(829, 450);
+            this.ClientSize = new System.Drawing.Size(984, 450);
+            this.Controls.Add(this.loguedUser);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -212,6 +242,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,6 +264,8 @@
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
         private FontAwesome.Sharp.IconMenuItem menuReportes;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label loguedUser;
     }
 }
 

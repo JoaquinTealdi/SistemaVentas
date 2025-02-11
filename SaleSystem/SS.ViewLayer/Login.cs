@@ -30,20 +30,27 @@ namespace SS.ViewLayer
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            UserSession.Instance.Logout();
             this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
+            if (string.IsNullOrWhiteSpace(txtDocumento.Text) || string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                MessageBox.Show("Por favor complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+
             var user = _usersService.GetUsers().Where(x => x.Dni == txtDocumento.Text && x.Password == txtClave.Text)
                                                .FirstOrDefault();
 
-
             if (user != null)
             {
-                Home form = new Home();
+                UserSession.Instance.Login(user);
 
+                Home form = new Home();
                 form.Show();
                 this.Hide();
                 
