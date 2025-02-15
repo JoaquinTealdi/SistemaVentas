@@ -49,8 +49,8 @@ namespace SS.ViewLayer
             if (user != null)
             {
                 UserSession.Instance.Login(user);
-
-                Home form = new Home();
+                IPermissionsMenuManager pmanager = new PermissionsMenuManager();
+                Home form = new Home(pmanager);
                 form.Show();
                 this.Hide();
                 
